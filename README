@@ -1,0 +1,7 @@
+Health aggregator projesi
+
+Önemli noktalar : application.yaml daki ayarlar
+Indicator package ındaki reactive interface ini implement eden servisler, bunların her biri kendi içinde webClient ile ilgili microservice in health durumu alıyor.
+Health Config : indicator package ındaki classları autowired ederek , contributor içerisinde kullanıyor.
+
+curl localhost:8080/actuator/health | jq
