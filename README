@@ -1,1 +1,15 @@
+Run the following commands in the project folder to start the program: 
 
+mvn clean install
+docker-compose up
+
+After booting up : run this command in order to see the health status of the microservices and the aggregated status:
+
+curl localhost:8080/actuator/health | jq
+
+
+Note : If your system does not have jq installed ( jq is for the pretty json output ), please apply the following :
+
+  sudo apt-get install jq
+  
+or visit the official website , https://stedolan.github.io/jq/download/ , for further information.
